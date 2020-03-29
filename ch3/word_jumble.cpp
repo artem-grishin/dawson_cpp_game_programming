@@ -32,7 +32,39 @@ int main (int argc, char *argv[]) {
     }
 
     //welcome
-    cout << "
+    cout << "\t\t\tWelcome to Word Jumble!\n\n";
+    cout << "Unscramble the letters to make a word.\n";
+    cout << "Enter 'hint' for a hint.\n";
+    cout << "Enter 'quit' to quit the game.\n\n";
+    cout << "The jumble is: " << jumble;
+
+    string guess;
+    cout << "\n\nYour guess: ";
+    cin >> guess;
+
+    while ((guess != theWord) && (guess != "quit")) {
+        if (guess == "hint") {
+
+            cout << theHint;
+
+        }
+        else {
+
+            cout << "Sorr, that's not it.";
+        }
+        cout << "\n\nYour guess: ";
+        cin >> guess;
+
+    }
+
+    if (guess == theWord) {
+        cout << "\nThat's it! You guess it!\n";
+
+    }
+    cout << "\nThanks for playing.\n";
+    return 0;
+
+
 
 
         
